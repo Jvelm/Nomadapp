@@ -8,11 +8,14 @@ export default function Formulario() {
     const [confirmacion, setConfirmacion] = useState("");
     const [terminos, setTerminos] = useState(false);
 
-
+    const handleSubmit= e => {
+        e.preventDefault();
+        alert("Has creado una cuenta correctamente")
+    }
     return (
         <>
         <h2> Por favor, ingresa los siguientes datos para crear tu cuenta en Nomadapp</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
             \\ TENGO QUE PONER EL LABEL SI NO VA NADA AFUERA?
             <label htmlFor="usuario"></label>
             <input
@@ -60,6 +63,7 @@ export default function Formulario() {
               name="terminos"
               onChange={(e) => setTerminos(e.target.checked)}
               />
+              <input type="submit"/>
               
         </form>
         </>
