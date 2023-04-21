@@ -1,5 +1,5 @@
 import { useState } from "react";
-import React {useState} from "react";
+
 
 export default function Formulario() {
     const [usuario, setUsuario] = useState("");
@@ -16,13 +16,9 @@ export default function Formulario() {
         <>
         <h2> Por favor, ingresa los siguientes datos para crear tu cuenta en Nomadapp</h2>
         <form onSubmit={handleSubmit}>
-            \\ TENGO QUE PONER EL LABEL SI NO VA NADA AFUERA?
-            <label htmlFor="usuario"></label>
             <input
              type="text"
               id="usuario" 
-              name="usuario"
-              \\ defaultVALUE???
               value={usuario}
               onchange={(e) => setUsuario(e.target.value)}
               defaultValue="Usuario"
@@ -32,7 +28,6 @@ export default function Formulario() {
              type="text"
               id="correo" 
               name="correo"
-              \\ defaultVALUE???
               value={correo}
               onchange={(e) => setCorreo(e.target.value)}
               defaultValue="correo Electrónico"
@@ -41,7 +36,6 @@ export default function Formulario() {
              type="text"
               id="contraseña" 
               name="contraseña"
-              \\ defaultVALUE???
               value={contraseña}
               onchange={(e) => setContraseña(e.target.value)}
               defaultValue="contraseña"
@@ -50,7 +44,6 @@ export default function Formulario() {
              type="text"
               id="confirmarcontraseña" 
               name="confirmarcontraseña"
-              \\ defaultVALUE???
               value={confirmacion}
               onchange={(e) => setConfirmacion(e.target.value)}
               defaultValue="confirmar contraseña"
@@ -59,6 +52,7 @@ export default function Formulario() {
               <label htmlFor="terminos"> He leído y acepto los términos y condiciones</label>
               <input 
               type="checkbox"
+              value={terminos}
               id="terminos"
               name="terminos"
               onChange={(e) => setTerminos(e.target.checked)}
