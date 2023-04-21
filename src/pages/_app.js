@@ -5,7 +5,7 @@ config.autoAddCss = false
 
 
 
-<Formulario/>
+
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
