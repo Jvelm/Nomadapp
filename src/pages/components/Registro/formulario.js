@@ -12,6 +12,7 @@ export default function Formulario() {
         e.preventDefault();
         alert("Has creado una cuenta correctamente")
     }
+    console.log(usuario, correo, contraseña, confirmacion, terminos)
     return (
         <>
         <h2> Por favor, ingresa los siguientes datos para crear tu cuenta en Nomadapp</h2>
@@ -20,8 +21,7 @@ export default function Formulario() {
              type="text"
               id="usuario" 
               value={usuario}
-              onchange={(e) => setUsuario(e.target.value)}
-              defaultValue="Usuario"
+              onChange={(e) => setUsuario(e.target.value)}
               />
               <label htmlFor="correo"></label>
             <input
@@ -29,24 +29,22 @@ export default function Formulario() {
               id="correo" 
               name="correo"
               value={correo}
-              onchange={(e) => setCorreo(e.target.value)}
-              defaultValue="correo Electrónico"
+              onChange={(e) => setCorreo(e.target.value)}
               />
                <input
              type="text"
               id="contraseña" 
               name="contraseña"
               value={contraseña}
-              onchange={(e) => setContraseña(e.target.value)}
-              defaultValue="contraseña"
+              onChange={(e) => setContraseña(e.target.value)}
+
               />
               <input
              type="text"
               id="confirmarcontraseña" 
               name="confirmarcontraseña"
               value={confirmacion}
-              onchange={(e) => setConfirmacion(e.target.value)}
-              defaultValue="confirmar contraseña"
+              onChange={(e) => setConfirmacion(e.target.value)}
               />
               <br/>
               <label htmlFor="terminos"> He leído y acepto los términos y condiciones</label>
