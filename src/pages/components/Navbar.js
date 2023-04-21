@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NextLink from "next/link";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faUser, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -17,11 +17,11 @@ const Navbar = ({ isLoggedIn }) => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <NextLink href="/">
+        <Link legacyBehavior href="/">
           <a>
-            <span>Home</span>
+            <span>Nomadapp</span>
           </a>
-        </NextLink>
+        </Link >
       </div>
 
       <div className="navbar__menu" onClick={toggleMenu}>
@@ -32,48 +32,48 @@ const Navbar = ({ isLoggedIn }) => {
         )}
       </div>
 
-      <div className={`navbar__NextLinks ${isMenuOpen ? "active" : ""}`}>
-        <NextLink href="/about">
+      <div className={`navbar__Link legacyBehaviors ${isMenuOpen ? "active" : ""}`}>
+        <Link legacyBehavior href="/about">
           <a onClick={closeMenu}>
             <span>About</span>
           </a>
-        </NextLink>
-        <NextLink href="/login">
+        </Link >
+        <Link legacyBehavior href="/login">
           <a onClick={closeMenu}>
             <span>Login</span>
           </a>
-        </NextLink>
+        </Link >
 
         {isLoggedIn && (
           <>
-            <NextLink href="/dashboard">
+            <Link legacyBehavior href="/dashboard">
               <a onClick={closeMenu}>
                 <span>Dashboard</span>
               </a>
-            </NextLink>
+            </Link >
             <div className="navbar__user">
               <FontAwesomeIcon icon={faUser} />
               <div className="navbar__dropdown">
-                <NextLink href="/account-settings">
+                <Link legacyBehavior href="/account-settings">
                   <a onClick={closeMenu}>
                     <span>Account Settings</span>
                   </a>
-                </NextLink>
-                <NextLink href="/favorites">
+                </Link >
+                <Link legacyBehavior href="/favorites">
                   <a onClick={closeMenu}>
                     <span>Favorites</span>
                   </a>
-                </NextLink>
-                <NextLink href="/likes">
+                </Link >
+                <Link legacyBehavior href="/likes">
                   <a onClick={closeMenu}>
                     <span>Likes</span>
                   </a>
-                </NextLink>
-                <NextLink href="/logout">
+                </Link >
+                <Link legacyBehavior href="/logout">
                   <a onClick={closeMenu}>
                     <span>Log Out</span>
                   </a>
-                </NextLink>
+                </Link>
               </div>
             </div>
           </>
