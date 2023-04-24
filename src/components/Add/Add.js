@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { FaStar } from 'react-icons/fa';
 import Link from 'next/link';
+import PlaceCards from './PlaceCards';
 
 const ButtonGroup = () => {
 
@@ -9,28 +10,28 @@ const ButtonGroup = () => {
     {
       id: 1,
       imageSrc: '/images/place1.jpg',
-      title: 'Title 1',
+      title: 'Restaurant 1',
       subtitle: 'Subtitle',
       rating: 4,
     },
     {
       id: 2,
       imageSrc: '/images/place2.jpg',
-      title: 'Title',
+      title: 'Museo',
       subtitle: 'Sub',
       rating: 5,
     },
     {
       id: 3,
       imageSrc: '/images/place3.jpg',
-      title: 'Title',
+      title: 'Teatro',
       subtitle: 'Sub',
       rating: 3,
     },
     {
       id: 4,
       imageSrc: '/images/place4.jpg',
-      title: 'Title',
+      title: 'Evento',
       subtitle: 'Sub',
       rating: 4.5,
     },
@@ -60,6 +61,7 @@ const ButtonGroup = () => {
         </button>
         </Link>
       </div>
+      <PlaceCards/>
       <div className="card-carousel-container">
         <div className="card-carousel">
           {places.map((place) => (
@@ -82,10 +84,13 @@ const ButtonGroup = () => {
         </div>
       </div>
       <style jsx>{`
+      
       .button-group-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: #FFFFFF;
+        border-radius: 5px;
       }
 
       .button-group {
@@ -97,9 +102,9 @@ const ButtonGroup = () => {
       }
 
       .button {
-        background-color: #ffffff;
+        background-color: #E91E63;
         border: none;
-        color: #000000;
+        color: #FFFFFF;
         cursor: pointer;
         font-size: 16px;
         font-weight: bold;
