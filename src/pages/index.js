@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import Navbar from '@/components/Navbar/Navbar';
 import MyCard from '@/components/Card';
+import Add from '@/components/Add/Add';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Navbar />
         <div>
           <MyCard />
+          <Add />
         </div>
       </main>
     </>
