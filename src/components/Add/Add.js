@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { FaStar } from 'react-icons/fa';
 import Link from 'next/link';
-import PlaceCards from './PlaceCards';
+//import PlaceCards from './PlaceCards';
 
 const ButtonGroup = () => {
 
@@ -61,7 +61,7 @@ const ButtonGroup = () => {
         </button>
         </Link>
       </div>
-      <PlaceCards/>
+     
       <div className="card-carousel-container">
         <div className="card-carousel">
           {places.map((place) => (
