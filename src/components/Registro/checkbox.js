@@ -1,6 +1,7 @@
 import {Box, FormControlLabel, Checkbox } from "@mui/material"
 import { useState } from "react"
 
+
 export const MyCheckbox = () => {
     const [aceptarTyC, setAceptarTyC  ] = useState(false)
     console.log({aceptarTyC})
