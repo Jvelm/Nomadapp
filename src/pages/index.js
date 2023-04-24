@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import Navbar from '@/components/Navbar';
-//import Formulario from '@/components/Registro/formulario';
+import MyCard from '@/components/Card';
 
 export default function Home() {
   return (
@@ -14,7 +14,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navbar />
-        <div></div>
+        <div>
+          <MyCard />
+        </div>
       </main>
     </>
   );
