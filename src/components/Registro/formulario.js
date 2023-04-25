@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Box, Grid, TextField, Card, CardContent, CardAction } from '@mui/material';
+import MyCheckbox from './checkbox';
 
 export default function Formulario() {
   const [usuario, setUsuario] = useState('');
@@ -86,7 +87,7 @@ export default function Formulario() {
         
       </Box>
 
-    
+      <MyCheckbox />
       
       <label htmlFor='terminos'> He leído y acepto los términos y condiciones</label>
       <input
@@ -99,4 +100,6 @@ export default function Formulario() {
       <input type='submit' />
     </>
   );
-}
+};
+
+export default Formulario;
